@@ -69,6 +69,7 @@ contents
 .main {
   margin: 0 auto;
   padding: 20px;
+  max-width: 640px;
   width: 80%;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
 
@@ -90,7 +91,9 @@ footer
 headings
 -------------------------------------*/
 .hdg-l1 {
-  text-align: center; }
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 /*-------------------------------------
 Common
@@ -224,11 +227,14 @@ Common
 .mt-100 {
   margin-top: 100px !important; }
 
-@media screen and (min-width: 414px) {/*414~*/ }
+@media screen and (min-width: 414px) {/*414~*/
 
-@media screen and (min-width: 768px) {/*768~*/ }
+  .hdg-l1 {
+    font-size: 3.2rem; } }
 
-@media screen and (min-width: 1280px) {/*920~*/
+@media screen and (min-width: 768px) {/*768~*/
 
   html {
     font-size: 80%; } }
+
+@media screen and (min-width: 1280px) {/*920~*/ }
