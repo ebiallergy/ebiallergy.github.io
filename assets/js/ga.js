@@ -1,0 +1,26 @@
+(function (i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+		(i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-59973092-4', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+var eventTrack = function (title, eventLabel) {
+	title = String(title);
+	eventLabel = String(eventLabel);
+	ga('send', 'event', title, 'click', eventLabel, null);
+}
+
+$('a').on('click', function () {
+	var title = 'ebiallergy.github.io',
+		lbl = $(this).data('title') || $(this).attr('title') || $(this).attr('href');
+
+	if (lbl) {
+		eventTrack(title, lbl);
+		console.log(title, lbl);
+	}
+});
