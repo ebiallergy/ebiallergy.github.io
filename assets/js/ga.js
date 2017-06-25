@@ -14,13 +14,3 @@ var eventTrack = function (title, eventLabel) {
 	eventLabel = String(eventLabel);
 	ga('send', 'event', title, 'click', eventLabel, null);
 }
-
-$('a').on('click', function () {
-	var title = 'ebiallergy.github.io',
-		lbl = $(this).data('title') || $(this).attr('title') || $(this).attr('href');
-
-	if (lbl) {
-		eventTrack(title, lbl);
-		console.log(title, lbl);
-	}
-});
